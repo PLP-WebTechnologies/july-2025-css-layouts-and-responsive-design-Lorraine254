@@ -1,0 +1,100 @@
+body{
+    background-color: bisque;
+    height: 10000px;
+}
+.title{
+    position: fixed;
+    background-color: brown;
+    text-align: center;
+    top:4;
+    left:0;
+    width:100%;
+    padding: 10px;
+    border:4px;
+    font-weight: bold;
+}
+
+a{
+    color:aqua;
+}
+
+.menu-section{
+    display: flex;
+    gap:20px;
+    align-items: center;
+}
+
+.card-content{
+    border:10px solid brown;
+    padding:5px;
+}
+   
+.price-menu {
+            display: grid;
+            grid-template-areas:
+              "menu-header desc-header price-header"
+              "menu1 desc1 price1"
+              "menu2 desc2 price2"
+              "menu3 desc3 price3";
+            grid-template-columns: 1fr 2fr 1fr;  /* 3 columns */
+            grid-template-rows: auto auto auto auto; /* header + 3 rows */
+            border: 2px solid black;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+        /* headers */
+        .menu-header  {
+             grid-area: menu-header; 
+             font-weight: bold; 
+             background:brown;
+             color: white;
+            }
+        .desc-header  {
+            grid-area: desc-header;
+            font-weight: bold; 
+            background:brown; 
+            color: white;
+        }
+        .price-header { 
+            grid-area: price-header; 
+            font-weight: bold; 
+            background:brown;
+            color: white;
+         }
+
+        /* row 1 */
+        .menu1  { grid-area: menu1; }
+        .desc1  { grid-area: desc1; }
+        .price1 { grid-area: price1; }
+
+        /* row 2 */
+        .menu2  { grid-area: menu2; }
+        .desc2  { grid-area: desc2; }
+        .price2 { grid-area: price2; }
+
+        /* row 3 */
+        .menu3  { grid-area: menu3; }
+        .desc3  { grid-area: desc3; }
+        .price3 { grid-area: price3; }
+
+/* Responsive styles for mobile */ 
+@media(max-width: 600px){
+    body{
+        font-size: 12px;
+        background-color: rgb(0,60,80);
+        color:white;
+    }
+    menu-section {
+        grid-template-columns: 1fr;
+    }
+
+    .card-content {
+        text-align: center; 
+    }
+}   
+
+video{
+    max-width: 100%;
+    height:auto;
+}
+
